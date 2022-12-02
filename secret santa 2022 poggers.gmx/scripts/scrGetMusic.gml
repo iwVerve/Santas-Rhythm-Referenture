@@ -18,6 +18,7 @@ switch (room)                       //Determines which song to play
         break;
         
     case rMiku:
+    case rOverpass:
         roomSong = -2;              //Don't change the music in any way (the Miku object plays it)
         break;
         

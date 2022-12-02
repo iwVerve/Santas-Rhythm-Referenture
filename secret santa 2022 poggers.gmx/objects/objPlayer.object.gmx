@@ -326,8 +326,8 @@ if (!frozen)
         scrPlayerJump();
     if (scrButtonCheckReleased(KEY.JUMP))
         scrPlayerReleaseJump();
-    if (scrButtonCheckPressed(KEY.SUICIDE))
-        scrKillPlayer();
+    //if (scrButtonCheckPressed(KEY.SUICIDE))
+    //    scrKillPlayer();
 }
 
 if (global.adAlign &amp;&amp; !place_free(x, y + (global.grav)) &amp;&amp; !frozen)

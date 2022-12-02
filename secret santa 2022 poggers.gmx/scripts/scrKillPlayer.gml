@@ -1,11 +1,14 @@
 ///scrKillPlayer()
 //kills the player
 
-if (instance_exists(objPlayer) && (!global.noDeath && !global.debugNoDeath))
+if (instance_exists(objPlayer) && (!global.noDeath && !global.debugNoDeath) && global.iframes <= 0)
 {
     global.deathSound = audio_play_sound(sndDeath, 0, false);
     
-    if (!global.muteMusic)  //play death music
+    global.iframes = global.iframes_duration;
+    award_grade(-1);
+    
+    /*if (!global.muteMusic)  //play death music
     {
         if (global.deathMusicMode == 1) //instantly pause the current music
         {
@@ -34,5 +37,5 @@ if (instance_exists(objPlayer) && (!global.noDeath && !global.debugNoDeath))
     {
         global.death += 1;
         scrSaveGame(false); //save death/time
-    }
+    }*/
 }

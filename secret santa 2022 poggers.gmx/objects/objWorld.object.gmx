@@ -179,6 +179,8 @@ if (global.gameStarted)
         }
     }
     
+    global.iframes--;
+    
     scrSetRoomCaption();
 }
 else if (room == rDifficultySelect)    //Special case for restarting in difficulty select
