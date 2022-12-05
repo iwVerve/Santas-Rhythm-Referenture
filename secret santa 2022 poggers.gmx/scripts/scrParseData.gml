@@ -56,6 +56,10 @@ if file_exists(filename) {
                         attack_id = 6;
                         delay = global.lifetime[2];
                         break;
+                    case "bonus":
+                        attack_id = 7;
+                        delay = global.lifetime[3];
+                        break;
                     default:
                         attack_id = -1;
                         break;

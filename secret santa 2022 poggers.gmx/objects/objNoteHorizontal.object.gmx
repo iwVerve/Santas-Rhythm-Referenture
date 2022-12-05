@@ -119,6 +119,7 @@ time++;
 progress = time/lifetime;
 
 if progress &gt;= destroy {
+    award_grade(0);
     instance_destroy();
 }
 if progress &gt;= endGood {

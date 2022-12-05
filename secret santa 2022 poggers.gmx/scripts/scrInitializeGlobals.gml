@@ -10,6 +10,7 @@ global.offset = 65;
 global.lifetime[0] = 35;
 global.lifetime[1] = 60;
 global.lifetime[2] = 30;
+global.lifetime[3] = 50;
 
 global.data = scrParseData(global.song);
 

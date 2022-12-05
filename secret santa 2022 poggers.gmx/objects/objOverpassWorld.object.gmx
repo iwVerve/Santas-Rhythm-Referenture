@@ -81,7 +81,7 @@ if scrButtonCheckPressed(KEY.SHOOT) {
         }
     }
     if best_note != noone &amp;&amp; best_note.grade &gt; 0 {
-        if best_note.dir == hold_dir {
+        if best_note.dir == hold_dir || best_note.dir == -2 {
             award_grade(best_note.grade);
         }
         else {
@@ -138,6 +138,9 @@ if time &gt; (beat + bit/bits) * 3000 / bpm {
                 with(instance_create(0, 0, objNoteHorizontal)) {
                     dir = 1;
                 }
+                break;
+            case 7:
+                instance_create(0, 0, objNoteBonus);
                 break;
         }
         next_attack++;

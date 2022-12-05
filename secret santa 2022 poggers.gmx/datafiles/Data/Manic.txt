@@ -8,10 +8,20 @@
 3 0 aimed_left
 4 0 line_left
 
+5 0 bonus
+6 0 bonus
+7 0 bonus
+8 0 bonus
+
 9 0 aimed_right
 10 0 aimed_right
 11 0 line_right
 12 0 line_right
+
+13 0 bonus
+14 0 bonus
+15 0 bonus
+16 0 bonus
 
 17 0 aimed_left
 18 0 aimed_left
@@ -19,6 +29,13 @@
 19 6 aimed_left
 20 0 aimed_left
 20 4 line_left
+
+21 0 bonus
+22 0 bonus
+23 0 bonus
+23 6 bonus
+24 0 bonus
+24 4 bonus
 
 25 0 line_right
 26 0 line_left
@@ -39,10 +56,6 @@
 
 
 49 0 rise_middle
-#49 4 rise_middle
 51 0 rise_left
-#51 4 rise_left
 53 0 rise_right
-#53 4 rise_right
 55 0 rise_left
-#55 4 rise_middle

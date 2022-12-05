@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>objNoteParent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -28,13 +28,12 @@
             <string>grade = 0;
 
 //Behavior
-dir = 0;
-lifetime = 50;
+dir = -2;
+lifetime = global.lifetime[3];
 startGood = 0.8;
 startGreat = 0.9;
-endGood = 1.1;
-destroy = 1.2;
-
+endGood = 1.06;
+destroy = 1.1;
 
 //State
 time = 0;
@@ -61,7 +60,14 @@ progress = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if grade &gt; 0 &amp;&amp; instance_exists(objPlayer) {
+    with(instance_create(400, 112, objCherry)) {
+        move_towards_point(objPlayer.x, objPlayer.y, 5);
+        image_xscale = 0.75;
+        image_yscale = 0.75;
+    }
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -87,7 +93,6 @@ progress = 0;
 progress = time/lifetime;
 
 if progress &gt;= destroy {
-    award_grade(0);
     instance_destroy();
 }
 if progress &gt;= endGood {
@@ -102,6 +107,46 @@ else if progress &gt;= startGood {
 else {
     grade = 0;
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>var radius = max(lerp(128, 0, progress / destroy), 0);
+var alpha = 0.5 * min(progress / destroy, 1);
+var thickness = 4;
+var precision = 32;
+var xx = objOverpassWorld.lens_x;
+var yy = 112;
+
+draw_set_color(c_white);
+draw_set_alpha(alpha);
+draw_primitive_begin(pr_trianglestrip);
+    for(var i = 0; i &lt;= precision; i++) {
+        for(var j = -1; j &lt;= 1; j += 2) {
+            var angle = i/precision * 360;
+            draw_vertex(xx + lengthdir_x(radius + j * thickness, angle), yy + lengthdir_y(radius + j * thickness, angle));
+        }
+    }
+draw_primitive_end();
+draw_set_alpha(1);
 </string>
           </argument>
         </arguments>
