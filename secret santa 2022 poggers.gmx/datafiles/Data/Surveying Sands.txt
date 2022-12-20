@@ -2,6 +2,7 @@
 4
 0
 
+0 0 tutorial 0
 16 0 aimed_left 1
 24 0 aimed_right 1
 

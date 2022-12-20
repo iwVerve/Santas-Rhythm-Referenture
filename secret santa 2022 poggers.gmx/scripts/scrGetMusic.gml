@@ -12,6 +12,10 @@ switch (room)                       //Determines which song to play
     case rHub:
         roomSong = "Discovery";
         break;
+        
+    case rCredits:
+        roomSong = "Bell Bypass";
+        break;
               
     case rOverpass:
         roomSong = -2;              //Don't change the music in any way (the Miku object plays it)

@@ -54,7 +54,11 @@ for (var i = 0; i < global.bossItemTotal; i++)
 global.gameClear = global.saveMap[? "gameClear"];
 
 //LOAD NEW SAVED VALUES HERE
-
+global.beatManic = global.saveMap[? "beatManic"];
+global.song = global.saveMap[? "song"];
+if global.song != global.loaded_song {
+    global.data = scrParseData(global.song);
+}
 
 var player = instance_create(global.saveMap[? "playerX"], global.saveMap[? "playerY"], objPlayer);
 with (player)

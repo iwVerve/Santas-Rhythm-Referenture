@@ -3,13 +3,13 @@
 if (argument_count >= 1)
 {
     draw_set_halign(fa_left);
-    draw_text(xMargin, yStart + yStep * currentSlot, argument[0]);
+    scrDrawTextOutline(xMargin, yStart + yStep * currentSlot, argument[0], c_white, c_black);
 }
 
 if (argument_count >= 2)
 {
     draw_set_halign(fa_right);
-    draw_text(view_wview - xMargin, yStart + yStep * currentSlot, argument[1]);
+    scrDrawTextOutline(view_wview - xMargin, yStart + yStep * currentSlot, argument[1], c_white, c_black);
 }
 
 currentSlot += 1;

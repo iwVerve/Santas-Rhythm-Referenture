@@ -45,7 +45,8 @@ if (savePosition)
     global.saveMap[? "gameClear"] = global.gameClear;
     
     //ADD NEW SAVED VALUES HERE
-    
+    global.saveMap[? "beatManic"] = global.beatManic;
+    global.saveMap[? "song"] = global.song;
 }
                      
                               

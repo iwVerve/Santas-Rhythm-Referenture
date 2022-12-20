@@ -44,6 +44,16 @@ hold_dir = 0;
 lens_x = 400;
 lens_flash = 0;
 lens_flash_duration = 16;
+
+points = 0;
+display_points = 0;
+combo = 0;
+
+hits[0] = 0;
+hits[1] = 0;
+hits[2] = 0;
+
+ended = false;
 </string>
           </argument>
         </arguments>
@@ -84,7 +94,12 @@ if scrButtonCheckPressed(KEY.SHOOT) {
     }
     if best_note != noone &amp;&amp; best_note.grade &gt; 0 {
         if best_note.dir == hold_dir || best_note.dir == -2 {
-            award_grade(best_note.grade);
+            if best_note.dir == -2 {
+                award_grade(best_note.grade, 40);
+            }
+            else {
+                award_grade(best_note.grade);
+            }
             lens_flash = lens_flash_duration;
         }
         else {
@@ -178,9 +193,16 @@ if true {
                 }
                 break;
             case 11:
+                if global.song == "Manic" {
+                    global.beatManic = true;
+                }
                 with(instance_create(384, 384, objWarp)) {
                     roomTo = rHub;
                 }
+                ended = true;
+                break;
+            case 12:
+                instance_create(384, 256, objTutorial);
                 break;
         }
         next_attack++;
@@ -195,6 +217,14 @@ if display_time &gt; 0 {
 if lens_flash &gt; 0 {
     lens_flash -= 1;
 }
+
+if points - display_points &gt; 10 {
+    display_points = floor(lerp(display_points, points, 0.2) + 0.5);
+}
+else if display_points &lt; points {
+    display_points += 1;
+}
+
 </string>
           </argument>
         </arguments>
@@ -276,6 +306,30 @@ if display_time &gt; 0 {
     }
     draw_set_color(grade_color);
     draw_text_transformed(400, 80, grade_text, display_scale, display_scale, 0);
+}
+
+draw_set_font(fDefault24);
+draw_set_halign(fa_right);
+draw_set_valign(fa_bottom);
+draw_set_color(c_black);
+scrDrawTextOutline(704, 80, display_points, c_white, c_black);
+
+draw_set_halign(fa_left);
+draw_set_font(fDefault12);
+scrDrawTextOutline(720, 80, "/" + string(global.max_points), c_white, c_black);
+
+if ended {
+    draw_set_valign(fa_middle);
+    draw_set_font(fDefault18);
+    
+    draw_set_halign(fa_right);
+    scrDrawTextOutline(396, 256, "Great:", merge_color(c_green, c_white, 0.1), c_black);
+    scrDrawTextOutline(396, 280, "Good:", c_ltgray, c_black);
+    scrDrawTextOutline(396, 304, "Miss:", c_red, c_black);
+    draw_set_halign(fa_left);
+    scrDrawTextOutline(404, 256, hits[2], merge_color(c_green, c_white, 0.1), c_black);
+    scrDrawTextOutline(404, 280, hits[1], c_ltgray, c_black);
+    scrDrawTextOutline(404, 304, hits[0], c_red, c_black);
 }
 </string>
           </argument>

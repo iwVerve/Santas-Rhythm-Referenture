@@ -1,7 +1,7 @@
 ///Sets configurable global options
 
 //Debug
-global.debugMode = true;        //Enables debug keys (check objWorld step to see all of them), make sure to set this to "false" before releasing your game
+global.debugMode = false;        //Enables debug keys (check objWorld step to see all of them), make sure to set this to "false" before releasing your game
 global.debugVisuals = true;     //Enables changing the color/alpha of player when infjump/god mode are toggled, make sure to disable this if you want to change the player's image_alpha or image_blend
 
 //Updates
@@ -15,7 +15,7 @@ global.menuSound = sndJump;         //Sets what sound to use for navigating the 
 
 //World
 global.startRoom = rHub;         //Sets which room to begin with
-global.roomCaptionDef = "YoYoYo Engine Verve Edition";  //Sets default window caption (only works with the Professional version of Studio)
+global.roomCaptionDef = "Santa's Rhythm Referenture";  //Sets default window caption (only works with the Professional version of Studio)
 global.deathMusicMode = 0;          //Sets whether or not to play death music when the player dies (0 = no death music, 1 = instantly pause current music, 2 = fade out current music)
 global.pauseDelayLength = 40;       //Sets the delay in frames in which the player can pause/unpause the game (can be set to 0 to disable pause delay)
 global.timeWhenDead = true;         //Sets whether or not to count the in-game timer when the player is dead

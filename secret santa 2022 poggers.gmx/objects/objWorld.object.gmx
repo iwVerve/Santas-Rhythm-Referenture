@@ -145,6 +145,13 @@ if (global.gameStarted)
             global.time += global.timeMicro div 1000000;
             global.timeMicro = global.timeMicro mod 1000000;
         }
+        
+        if keyboard_check_pressed(vk_backspace) {
+            with(objPlayer) {
+                instance_destroy();
+            }
+            room_goto(rHub);
+        }
     }
     else    //Volume control
     {

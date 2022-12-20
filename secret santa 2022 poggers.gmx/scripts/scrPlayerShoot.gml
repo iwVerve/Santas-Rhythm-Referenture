@@ -1,5 +1,5 @@
 ///scrPlayerShoot
-
+exit;
 if (instance_number(objBullet) < 4)
 {
     instance_create(x, y - 3 * global.fixBulletHeight, objBullet);

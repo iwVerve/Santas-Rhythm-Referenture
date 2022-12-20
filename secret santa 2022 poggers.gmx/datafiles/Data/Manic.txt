@@ -65,15 +65,145 @@
 69 0 circle_left 1
 71 0 aimed_left 1
 73 0 aimed_middle 1
-73 2 bonus 0
+73 2 aimed_middle 0
 74 2 aimed_middle 1
-75 0 bonus 0
+75 0 aimed_middle 0
 76 0 aimed_middle 1
-76 2 bonus 0
+76 2 aimed_middle 0
 77 2 aimed_middle 1
-78 0 bonus 0
+78 0 aimed_middle 0
 79 0 aimed_middle 1
-79 2 bonus 0
-80 0 bonus 0
+79 2 aimed_middle 0
+80 0 aimed_middle 0
 
 81 0 rise_middle 1
+83 0 aimed_left 0
+85 0 rise_middle 1
+87 0 aimed_right 0
+89 0 aimed_left 1
+89 2 aimed_left 0
+90 2 aimed_left 1
+91 0 aimed_left 0
+92 0 aimed_right 1
+92 2 aimed_right 0
+93 2 aimed_right 1
+94 0 aimed_right 0
+95 0 aimed_middle 0
+95 2 aimed_middle 0
+96 0 rise_middle 1
+
+97 0 aimed_left 1
+98 0 aimed_middle 0
+99 0 aimed_right 0
+100 0 aimed_middle 0
+101 0 aimed_middle 1
+102 0 aimed_right 0
+103 0 aimed_left 0
+104 0 aimed_middle 0
+105 0 aimed_right 1
+106 0 aimed_middle 0
+107 0 aimed_right 0
+108 0 aimed_left 0
+109 0 aimed_middle 1
+110 0 aimed_right 0
+111 0 aimed_middle 0
+112 0 aimed_left 0
+
+113 0 aimed_left 1
+114 0 aimed_left 1
+115 0 aimed_left 0
+116 0 aimed_left 0
+117 0 aimed_right 1
+118 0 aimed_right 1
+119 0 aimed_right 0
+120 0 aimed_right 0
+
+121 0 aimed_right 1
+122 0 aimed_right 1
+123 0 aimed_right 0
+124 0 aimed_right 0
+125 0 aimed_left 1
+126 0 aimed_left 1
+127 0 aimed_left 0
+128 0 line_left 1
+
+
+
+131 0 aimed_right 1
+132 0 aimed_right 1
+133 0 aimed_right 0
+134 0 aimed_right 0
+135 0 line_right 1
+136 0 line_right 1
+
+139 0 aimed_left 1
+140 0 aimed_right 0
+141 0 aimed_left 1
+142 0 aimed_right 0
+143 0 rise_middle 1
+
+145 0 aimed_middle 1
+146 0 aimed_middle 1
+147 0 aimed_right 1
+148 0 line_right 1
+149 0 aimed_left 1
+150 0 line_left 1
+
+152 0 aimed_left 0
+153 0 aimed_right 0
+154 0 aimed_middle 0
+155 0 aimed_right 1
+157 0 aimed_left 1
+
+
+161 0 circle_left 1
+162 0 aimed_middle 1
+
+165 0 circle_right 1
+166 0 aimed_middle 1
+
+169 0 aimed_left 1
+170 0 aimed_left 1
+171 0 aimed_left 1
+172 0 aimed_left 1
+
+177 0 line_right 1
+178 0 aimed_right 1
+179 0 aimed_right 1
+180 0 aimed_right 1
+
+185 0 aimed_right 1
+186 0 aimed_left 1
+187 0 line_left 1
+188 0 line_left 1
+
+192 0 aimed_middle 1
+192 2 aimed_middle 1
+193 0 rise_middle 1
+
+
+197 0 circle_left 1
+198 0 circle_left 1
+
+201 0 circle_right 1
+202 0 line_right 1
+204 0 aimed_middle 1
+205 0 rise_right 1
+
+207 0 rise_middle 1
+209 0 aimed_left 0
+210 0 aimed_right 0
+211 0 aimed_middle 1
+212 0 aimed_right 0
+213 0 aimed_left 0
+214 0 aimed_middle 0
+215 0 aimed_right 1
+216 0 aimed_left 0
+217 0 aimed_middle 0
+218 0 aimed_left 0
+219 0 rise_middle 1
+220 0 rise_middle 1
+221 0 rise_middle 1
+222 0 rise_middle 1
+
+228 0 end 0

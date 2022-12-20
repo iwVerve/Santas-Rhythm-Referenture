@@ -3,6 +3,7 @@
 
 
 global.song = "Manic";
+global.loaded_song = "";
 global.bpm = 150;
 global.bits = 4;
 global.offset = 65;
@@ -103,3 +104,5 @@ global.triggers = ds_list_create();
 scrTriggerList();
 
 randomize();    //Make sure the game starts with a random seed for RNG
+
+global.beatManic = false;

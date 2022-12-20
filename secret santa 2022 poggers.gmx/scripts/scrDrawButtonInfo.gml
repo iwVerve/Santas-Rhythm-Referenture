@@ -26,14 +26,14 @@ else
 draw_set_font(fDefault12);
 draw_set_valign(fa_top);
 draw_set_halign(fa_left);
-draw_text(34, 556, "["+backButton+"] Back");
+scrDrawTextOutline(34, 556, "["+backButton+"] Back", c_white, c_black);
 draw_set_halign(fa_right);
-draw_text(766, 556, "["+acceptButton+"] Accept");
+scrDrawTextOutline(766, 556, "["+acceptButton+"] Accept", c_white, c_black);
 
 if (optionsText)
 {
     //draw button info for the options menu
     
     draw_set_halign(fa_middle);
-    draw_text(400, 556, "["+optionsButton+"] Options");
+    scrDrawTextOutline(400, 556, "["+optionsButton+"] Options", c_white, c_black);
 }

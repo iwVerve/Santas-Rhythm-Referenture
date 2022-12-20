@@ -9,6 +9,8 @@ if file_exists(filename) {
         global.bpm = real(file_text_readln(file));
         global.bits = real(file_text_readln(file));
         global.offset = real(file_text_readln(file));
+        global.max_points = 0;
+        var combo = 0;
         
         var i = 0;
         while(!file_text_eof(file)) {
@@ -28,6 +30,8 @@ if file_exists(filename) {
                 /*if ord(string_char_at(attack, string_length(attack))) == 10 {
                     attack = string_copy(line, 1, string_length(attack) - 2);
                 }*/
+                
+                var awarded_points = 100;
                 
                 var attack_id, delay;
                 switch(attack) {
@@ -66,6 +70,7 @@ if file_exists(filename) {
                     case "bonus":
                         attack_id = 7;
                         delay = global.lifetime[3];
+                        awarded_points = 40;
                         break;
                     case "circle_left":
                         attack_id = 8;
@@ -78,6 +83,12 @@ if file_exists(filename) {
                     case "end":
                         attack_id = 11;
                         delay = 0;
+                        awarded_points = 0;
+                        break;
+                    case "tutorial":
+                        attack_id = 12;
+                        delay = 0;
+                        awarded_points = 0;
                         break;
                     default:
                         attack_id = -1;
@@ -88,10 +99,17 @@ if file_exists(filename) {
                 data[# i, 1] = attack_id;
                 data[# i, 2] = spawn;
                 
+                if awarded_points > 0 {
+                    var mult = 1 + min(combo, 4) / 4;
+                    global.max_points += mult * awarded_points;
+                    combo += 1;
+                }
+                
                 i++;
             }
         }
     file_text_close(file);
 }
 
+global.loaded_song = global.song;
 return data;

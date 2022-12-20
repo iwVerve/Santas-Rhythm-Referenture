@@ -1,0 +1,22 @@
+Be warned, just because it's possible doesn't mean it's fun or easy.
+
+The Music folder needs to contain a <song>.ogg, and the Data folder needs a <song>.txt.
+The first three lines of a data file indicate the bpm, the amount of subdivisions of each beat, and the song offset in frames to align the beat. Attacks must be ordered from earliest to latest.
+
+Each further line is in the form:
+<beat> <bit> <attack> <spawn>
+Beat - The beat at which the attack spawns. First beat is 0.
+Bit - The subdivision of a beat, from 0 to n-1 for n subdivisions.
+Attack - Name of attack
+Spawn - 1 or 0, whether to spawn the fruit as an obstacle. Sometimes necessary balance.
+
+Attacks:
+line_left, line_right - Rotating line
+aimed_left, aimed_middle, aimed_right - Single fruit
+rise_left, rise_middle, rise_right - Flat line
+circle_left, circle_right - Rotating circle
+bonus - Bonus ring
+end - Spawns the warp
+
+Every line after the first three that doesn't start with a number is ignored.
+This means you can leave empty lines or comments for clarity.
