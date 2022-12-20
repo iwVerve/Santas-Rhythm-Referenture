@@ -1,0 +1,72 @@
+118
+4
+0
+
+16 0 aimed_left 1
+24 0 aimed_right 1
+
+32 0 aimed_middle 1
+36 0 aimed_middle 1
+40 0 aimed_left 1
+44 0 aimed_left 1
+
+48 0 rise_middle 1
+50 0 aimed_left 1
+52 0 rise_left 1
+54 0 aimed_right 1
+56 0 rise_right 1
+58 0 aimed_middle 1
+60 0 rise_middle 1
+62 0 rise_middle 1
+
+64 0 aimed_left 1
+65 0 aimed_left 1
+66 0 aimed_left 1
+67 0 aimed_left 1
+
+68 0 aimed_right 1
+69 0 aimed_right 1
+70 0 aimed_right 1
+71 0 aimed_right 1
+
+72 0 aimed_middle 1
+73 0 aimed_right 1
+74 0 aimed_middle 1
+75 0 aimed_right 1
+
+81 0 aimed_left 1
+81 3 aimed_left 0
+83 0 aimed_right 1
+83 3 aimed_right 0
+85 0 aimed_left 1
+85 3 aimed_left 0
+87 0 aimed_right 1
+87 3 aimed_right 0
+
+89 0 aimed_left 1
+89 3 aimed_middle 0
+91 0 aimed_right 1
+91 3 aimed_middle 0
+93 0 aimed_right 1
+93 3 aimed_middle 0
+95 0 aimed_left 1
+95 3 aimed_middle 0
+
+97 0 aimed_left 1
+97 3 rise_left 1
+99 0 aimed_left 0
+99 3 aimed_left 0
+101 0 aimed_right 1
+101 3 rise_right 1
+103 0 aimed_right 0
+103 3 aimed_right 0
+
+105 0 aimed_middle 1
+105 3 aimed_middle 1
+107 0 aimed_middle 1
+107 3 aimed_middle 1
+109 0 aimed_middle 1
+109 3 aimed_middle 1
+111 0 rise_middle 1
+
+115 0 end 0

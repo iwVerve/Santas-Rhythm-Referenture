@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>objNoteParent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -28,18 +28,25 @@
             <string>grade = 0;
 
 //Behavior
-dir = 0;
+dir = 1;
 spawn = 1;
-lifetime = 50;
-startGood = 0.8;
-startGreat = 0.9;
-endGood = 1.1;
-destroy = 1.2;
+lifetime = global.lifetime[4];
+startGood = 0.85;
+startGreat = 0.91;
+endGood = 1.09;
+destroy = 1.15;
 
+cherry_count = 10;
+radius = 96;
+circle_x = 400;
+circle_y = 112 + radius;
+start_angle = 0;
 
 //State
 time = 0;
 progress = 0;
+init = false;
+cherries = noone;
 </string>
           </argument>
         </arguments>
@@ -62,7 +69,20 @@ progress = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if spawn {
+    for(var i = 0; i &lt; cherry_count; i++) {
+        with(cherries[i]) {
+            move_towards_point(other.circle_x, other.circle_y, -6);
+            direction += choose(-1, 1) * random(3);
+        }
+    }
+}
+else {
+    for(var i = 0; i &lt; cherry_count; i++) {
+        instance_destroy(cherries[i]);
+    }
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -84,7 +104,25 @@ progress = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>time++;
+            <string>if !init {
+    for(var i = 0; i &lt; cherry_count; i++) {
+        cherries[i] = instance_create(circle_x, circle_y, objCherry);
+    }
+    switch(dir) {
+        case -1:
+            cherries[0].sprite_index = sprCherryLeft;
+            break;
+        case 1:
+            cherries[0].sprite_index = sprCherryRight;
+            break;
+    }
+    start_angle = dir * 270;
+    circle_x += global.lens_step * dir;
+    cherries[0].depth -= 1;
+    init = true;
+}
+
+time++;
 progress = time/lifetime;
 
 if progress &gt;= destroy {
@@ -102,6 +140,16 @@ else if progress &gt;= startGood {
 }
 else {
     grade = 0;
+}
+
+var f = 1 - power(1 - progress, 4);
+var rad = lerp(0, radius, f);
+var angle = lerp(start_angle, 0, progress) + 90;
+
+for(var i = 0; i &lt; cherry_count; i++) {
+    var a = angle + i / cherry_count * 360;
+    cherries[i].x = circle_x + lengthdir_x(rad, a);
+    cherries[i].y = circle_y + lengthdir_y(rad, a);
 }
 </string>
           </argument>

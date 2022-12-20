@@ -29,11 +29,12 @@
 
 //Behavior
 dir = 1;
+spawn = 1;
 lifetime = global.lifetime[0];
-startGood = 0.8;
-startGreat = 0.9;
-endGood = 1.1;
-destroy = 1.15;
+startGood = 0.75;
+startGreat = 0.85;
+endGood = 1.15;
+destroy = 1.2;
 
 cherry_count = 9;
 middle_cherry = (cherry_count - 1) / 2;
@@ -69,10 +70,17 @@ cherries = noone;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>for(var i = 0; i &lt; cherry_count; i++) {
-    with(cherries[i]) {
-        gravity = random_range(0.2, 0.24);
+            <string>if spawn {
+    for(var i = 0; i &lt; cherry_count; i++) {
+        with(cherries[i]) {
+            gravity = random_range(0.2, 0.24);
+        }
     }
+}
+else {
+    for(var i = 0; i &lt; cherry_count; i++) {
+        instance_destroy(cherries[i]);
+    } 
 }
 </string>
           </argument>

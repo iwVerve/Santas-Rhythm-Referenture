@@ -6,11 +6,13 @@ global.song = "Manic";
 global.bpm = 150;
 global.bits = 4;
 global.offset = 65;
+global.delay = 65;
 
 global.lifetime[0] = 35;
 global.lifetime[1] = 60;
 global.lifetime[2] = 30;
 global.lifetime[3] = 50;
+global.lifetime[4] = 60;
 
 global.data = scrParseData(global.song);
 

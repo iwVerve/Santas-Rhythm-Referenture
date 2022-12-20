@@ -29,9 +29,10 @@
 
 //Behavior
 dir = -2;
+spawn = 1;
 lifetime = global.lifetime[3];
 startGood = 0.8;
-startGreat = 0.9;
+startGreat = 0.88;
 endGood = 1.06;
 destroy = 1.1;
 
@@ -60,11 +61,14 @@ progress = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if grade &gt; 0 &amp;&amp; instance_exists(objPlayer) {
-    with(instance_create(400, 112, objCherry)) {
-        move_towards_point(objPlayer.x, objPlayer.y, 5);
-        image_xscale = 0.75;
-        image_yscale = 0.75;
+            <string>if spawn {
+    if progress &lt; destroy &amp;&amp; instance_exists(objPlayer) {
+        with(instance_create(objOverpassWorld.lens_x, 112, objCherry)) {
+            move_towards_point(objPlayer.x, objPlayer.y, 8);
+            image_xscale = 0.75;
+            image_yscale = 0.75;
+            direction += choose(-1, 1) * random(15);
+        }
     }
 }
 </string>
@@ -130,7 +134,7 @@ else {
           <argument>
             <kind>1</kind>
             <string>var radius = max(lerp(128, 0, progress / destroy), 0);
-var alpha = 0.5 * min(progress / destroy, 1);
+var alpha = 0.4 * min(progress / destroy, 1);
 var thickness = 4;
 var precision = 32;
 var xx = objOverpassWorld.lens_x;

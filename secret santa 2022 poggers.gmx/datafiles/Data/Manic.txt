@@ -1,61 +1,79 @@
 150
-8
+4
 65
 
+1 0 aimed_left 1
+2 0 aimed_left 0
+3 0 aimed_left 1
+4 0 aimed_left 0
+5 0 bonus 0
+6 0 bonus 0
+7 0 bonus 0
+8 0 bonus 0
 
-1 0 aimed_left
-2 0 aimed_left
-3 0 aimed_left
-4 0 line_left
+9 0 aimed_right 1
+10 0 aimed_right 1
+11 0 aimed_left 0
+12 0 aimed_right 0
+13 0 bonus 0
+14 0 bonus 0
+15 0 aimed_left 1
+16 0 bonus 0
 
-5 0 bonus
-6 0 bonus
-7 0 bonus
-8 0 bonus
+17 0 rise_middle 1
+19 0 bonus 0
+20 0 bonus 0
+21 0 rise_left 1
+23 0 bonus 0 
+24 0 bonus 0
+25 0 rise_right 1
+27 0 bonus 0
+28 0 bonus 0
+29 0 rise_left 1
+31 0 bonus 0
+32 0 aimed_middle 1
 
-9 0 aimed_right
-10 0 aimed_right
-11 0 line_right
-12 0 line_right
+33 0 rise_middle 1
+35 0 rise_left 1
+37 0 rise_right 1
+39 0 rise_middle 1
+41 0 aimed_right 1
+42 2 aimed_right 1
+44 0 aimed_right 1
+45 2 aimed_right 1
+47 0 aimed_right 1
+48 2 aimed_right 1
 
-13 0 bonus
-14 0 bonus
-15 0 bonus
-16 0 bonus
+49 0 aimed_middle 1
+49 2 aimed_middle 1
+51 0 aimed_left 0
+51 2 aimed_left 0
+53 0 aimed_middle 1
+53 2 aimed_left 1
+55 0 aimed_left 1
+55 2 aimed_left 1
+56 0 aimed_left 1
 
-17 0 aimed_left
-18 0 aimed_left
-19 0 aimed_left
-19 6 aimed_left
-20 0 aimed_left
-20 4 line_left
+57 0 aimed_left 1
+58 2 aimed_left 1
+60 0 aimed_left 1
+61 2 aimed_left 1
+63 0 aimed_left 1
 
-21 0 bonus
-22 0 bonus
-23 0 bonus
-23 6 bonus
-24 0 bonus
-24 4 bonus
+65 0 circle_right 1
+67 0 aimed_right 1
+69 0 circle_left 1
+71 0 aimed_left 1
+73 0 aimed_middle 1
+73 2 bonus 0
+74 2 aimed_middle 1
+75 0 bonus 0
+76 0 aimed_middle 1
+76 2 bonus 0
+77 2 aimed_middle 1
+78 0 bonus 0
+79 0 aimed_middle 1
+79 2 bonus 0
+80 0 bonus 0
 
-25 0 line_right
-26 0 line_left
-27 0 line_right
-28 0 line_left
-
-33 0 rise_middle
-#35 0 rise_left
-37 0 rise_right
-#39 0 rise_middle
-
-41 0 aimed_left
-42 4 aimed_right
-44 0 aimed_left
-45 4 aimed_right
-47 0 aimed_left
-48 4 aimed_right
-
-
-49 0 rise_middle
-51 0 rise_left
-53 0 rise_right
-55 0 rise_left
+81 0 rise_middle 1

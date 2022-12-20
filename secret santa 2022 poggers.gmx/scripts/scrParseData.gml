@@ -2,7 +2,7 @@
 
 var name = argument0;
 var filename = "Data/" + name + ".txt";
-var data = ds_grid_create(1024, 2);
+var data = ds_grid_create(1024, 3);
 ds_grid_clear(data, -1);
 if file_exists(filename) {
     var file = file_text_open_read(filename);
@@ -21,10 +21,13 @@ if file_exists(filename) {
                 var bit = real(string_copy(line, 1, p - 1));
                 line = string_delete(line, 1, p);
                 p = string_pos(" ", line);
-                var attack = line;
-                if ord(string_char_at(attack, string_length(attack))) == 10 {
+                var attack = string_copy(line, 1, p - 1);
+                line = string_delete(line, 1, p);
+                //p = string_pos(" ", line);
+                var spawn = real(line);
+                /*if ord(string_char_at(attack, string_length(attack))) == 10 {
                     attack = string_copy(line, 1, string_length(attack) - 2);
-                }
+                }*/
                 
                 var attack_id, delay;
                 switch(attack) {
@@ -44,6 +47,10 @@ if file_exists(filename) {
                         attack_id = 3;
                         delay = global.lifetime[1];
                         break;
+                    case "aimed_middle":
+                        attack_id = 10;
+                        delay = global.lifetime[1];
+                        break;
                     case "rise_left":
                         attack_id = 4;
                         delay = global.lifetime[2];
@@ -60,6 +67,18 @@ if file_exists(filename) {
                         attack_id = 7;
                         delay = global.lifetime[3];
                         break;
+                    case "circle_left":
+                        attack_id = 8;
+                        delay = global.lifetime[4];
+                        break;
+                    case "circle_right":
+                        attack_id = 9;
+                        delay = global.lifetime[4];
+                        break;
+                    case "end":
+                        attack_id = 11;
+                        delay = 0;
+                        break;
                     default:
                         attack_id = -1;
                         break;
@@ -67,6 +86,7 @@ if file_exists(filename) {
                 var time = floor((beat + bit / global.bits) * 3000 / global.bpm + 0.5) + global.offset - delay;
                 data[# i, 0] = time;
                 data[# i, 1] = attack_id;
+                data[# i, 2] = spawn;
                 
                 i++;
             }
