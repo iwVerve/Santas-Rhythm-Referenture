@@ -301,6 +301,8 @@
     <sprite>sprites\sprSnow</sprite>
     <sprite>sprites\sprTutorial</sprite>
     <sprite>sprites\sprShark</sprite>
+    <sprite>sprites\sprBigTutorial</sprite>
+    <sprite>sprites\sprTutorialBackspace</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bAllTiles</background>
@@ -536,6 +538,8 @@
     <object>objects\objSnowSpawner</object>
     <object>objects\objTutorial</object>
     <object>objects\objShark</object>
+    <object>objects\objTutorialSign</object>
+    <object>objects\objTutorialImage</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Init">

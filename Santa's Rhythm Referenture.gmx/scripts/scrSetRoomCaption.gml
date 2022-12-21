@@ -3,7 +3,7 @@
 
 var roomCaption = global.roomCaptionDef;
 
-if (global.gameStarted)
+/*if (global.gameStarted)
 {
     roomCaption += " -"
     roomCaption += " Deaths: " + string(global.death);
@@ -20,7 +20,7 @@ if (global.gameStarted)
     roomCaption += string(t div 10);
     t = t mod 10;
     roomCaption += string(t);
-}
+}*/
 
 if (roomCaption != global.roomCaptionLast)
 {
